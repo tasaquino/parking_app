@@ -1,0 +1,31 @@
+name: Parking App Workflow
+on: [push]
+jobs:
+  run:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.7.12' # same version I have on my machine 20/05/2023
+        channel: 'stable'
+        architecture: x64
+    - run: flutter pub get
+    - name: Generate coverage report
+      run: flutter test --coverage 
+      env:
+        FB_API_TOKEN: ${{ secrets.FB_API_TOKEN }}
+        FB_PROJ_URL: ${{ secrets.FB_PROJ_URL }}
+        FB_ANDROID_APP_ID: ${{ secrets.FB_ANDROID_APP_ID }}
+        FB_MSG_SENDER: ${{ secrets.FB_MSG_SENDER }}
+        FB_PROJECT_ID: ${{ secrets.FB_PROJECT_ID }}
+        FB_IOS_APP_ID: ${{ secrets.FB_IOS_APP_ID }}
+        FB_IOS_CLIENT_ID: ${{ secrets.FB_IOS_CLIENT_ID }}
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        fail_ci_if_error: true
+        files: ./coverage/lcov.info
+        flags: unittests
+        verbose: true
