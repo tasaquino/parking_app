@@ -4,8 +4,8 @@ import 'package:http/http.dart' as http;
 import 'package:parking_app/features/places/data/places_repository_impl.dart';
 import 'package:parking_app/features/places/domain/places_interactor.dart';
 import 'package:parking_app/features/places/domain/places_interactor_impl.dart';
-import 'package:parking_app/features/places/presentation/providers/places_notifier.dart';
-import 'package:parking_app/features/places/presentation/providers/places_state.dart';
+import 'package:parking_app/features/places/presentation/notifiers/places_notifier.dart';
+import 'package:parking_app/features/places/presentation/notifiers/places_state.dart';
 
 final placesRepositoryProvider = Provider((_) {
   return PlacesRepositoryImpl(http.Client());

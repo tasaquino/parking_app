@@ -2,8 +2,8 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:parking_app/features/places/data/models/parking_place.dart';
 import 'package:parking_app/features/places/domain/places_interactor.dart';
-import 'package:parking_app/features/places/presentation/providers/places_notifier.dart';
-import 'package:parking_app/features/places/presentation/providers/places_state.dart';
+import 'package:parking_app/features/places/presentation/notifiers/places_notifier.dart';
+import 'package:parking_app/features/places/presentation/notifiers/places_state.dart';
 import 'package:test/test.dart';
 import 'package:state_notifier_test/state_notifier_test.dart';
 

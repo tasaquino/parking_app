@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:parking_app/features/places/data/models/parking_place.dart';
 import 'package:parking_app/features/places/domain/places_interactor.dart';
-import 'package:parking_app/features/places/presentation/providers/places_state.dart';
+import 'package:parking_app/features/places/presentation/notifiers/places_state.dart';
 
 class PlacesNotifier extends StateNotifier<PlacesState> {
   final PlacesInteractor _interactor;
