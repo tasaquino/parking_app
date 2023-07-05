@@ -8,10 +8,9 @@ import 'package:parking_app/features/places/presentation/notifiers/places_state.
 
 final placesRepository = PlacesRepositoryImpl(http.Client());
 
-final placesInteractorProvider = PlacesInteractorImpl(placesRepository);
+final placesInteractor = PlacesInteractorImpl(placesRepository);
 
 final placesNotifierProvider =
     StateNotifierProvider<PlacesNotifier, PlacesState>((ref) {
-  final interactor = placesInteractorProvider;
-  return PlacesNotifier(interactor);
+  return PlacesNotifier(placesInteractor);
 });
