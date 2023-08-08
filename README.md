@@ -3,7 +3,7 @@
 # Flutter Parking - Educational Pet Project
 
 Flutter Parking is not intented to be used commercially, is just a Pet Project for me to exercise real world needs of a Mobile Solution with Flutter.
-Idea is to share the experiences and decisions taken in form of posts, as long as I advance in many other mobile topics in this Pet Project. I hope I keep posting the next steps in this saga and nothing blocks me from creating the subsequent parts as happened with this only one part on Flutter and BLOC that I wrote in 2020 :D
+Idea is to share the experiences and decisions taken in form of posts, as long as I advance in many other mobile topics in this Pet Project.
 
 ## Screenshots
 
